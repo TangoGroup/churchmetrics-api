@@ -1,6 +1,21 @@
 # Users
 
-Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum.
+Users on your account can be assigned to a role and campus. 
+
+## Roles
+
+### Admins
+
+Admins have full access to all data and settings for the account. If the user is assigned the "admin" role, they will not be assigned to any campus.
+
+### Staff
+
+Staff users are assigned to a particular campus. They can input data for up to 6 days after the service time. They do not have access to Church settings.
+
+### Volunteer
+
+Volunteers are assigned to a particular campus. They can only input data for a service time on the day of the actual service time. They only have access to the "Input" page -- not Church settings, dashboards, charts, or anything else.
+
 
 # Available API's
 

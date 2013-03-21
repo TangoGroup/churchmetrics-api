@@ -1,8 +1,8 @@
 # Records
 
-Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum.
+Records are where your data is stored. One record is stored per category, per campus, per service time.
 
-# API's under development
+# Available API's
 
 ## Get records
 
@@ -141,6 +141,7 @@ Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio,
 }
 ```
 
+# API's under development
 
 ## Create record
 

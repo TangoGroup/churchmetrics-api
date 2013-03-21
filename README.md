@@ -6,27 +6,27 @@ This is a REST-style API that uses JSON for serialization.
 
 All URLs start with `https://churchmetrics.com/api/v1/`. **SSL only**. The path is prefixed with "api" and the API version. If we change the API in backward-incompatible ways, we'll bump the version marker and maintain stable support for the old URLs.
 
-To make a request for all the projects on your account, you'd append the projects index path to the base url to form something like https://basecamp.com/999999999/api/v1/projects.json. In curl, that looks like:
+To make a request for all the users on your account, you'd append the projects index path to the base url to form something like `https://churchmetrics.com/api/v1/users.json`. In curl, that looks like:
 
 ```
-curl -H "X-Auth-User: jdoe" -H "X-Auth-Key: a86850deb2742ec3cb41518e26aa2d89" https://churchmetrics.com/api/v1/projects.json
+curl -H "X-Auth-User: jdoe@church.com" -H "X-Auth-Key: a86850deb2742ec3cb41518e26aa2d89" https://churchmetrics.com/api/v1/users.json
 ```
 
 To create something, it's the same deal except you also have to include the `Content-Type` header and the JSON data:
 
 ```
 curl -H 'Content-Type: application/json' \
-  -H "X-Auth-User: jdoe" \
+  -H "X-Auth-User: jdoe@church.com" \
   -H "X-Auth-Key: a86850deb2742ec3cb41518e26aa2d89" \
   -d '{ "value": "36" }' \
-  https://churchmetrics.com/api/v1/records
+  https://churchmetrics.com/api/v1/records.json
 ```
 
 That's all!
 
 ## Authentication
 
-All requests are made by passing two header values: `X-Auth-User` and `X-Auth-Key`. The first is your username, and the second is your personal API key. This key can be found on your personal profile page.
+All requests are made by passing two header values: `X-Auth-User` and `X-Auth-Key`. The first is your email address, and the second is your personal API key. This key can be found on your personal profile page.
 
 This is secure since all requests use SSL.
 
@@ -55,7 +55,7 @@ Requests that return multiple items will be paginated to 30 items by default. Yo
     $ curl https://churchmetrics.com/api/v1/records.json?page=2&per_page=100
     
 
-The pagination info is included in [the Link header][8]. It is important to follow these Link header values instead of constructing your own URLs. In some instances, such as in the [Commits API][9], pagination is based on SHA1 and not on page number.
+The pagination info is included in the [Link header](http://tools.ietf.org/html/rfc5988). It is important to follow these Link header values instead of constructing your own URLs. In some instances, pagination is based on SHA1 and not on page number.
 
 	Link: <https://churchmetrics.com/api/v1/records.json?page=3&per_page=100>; rel="next",<https://churchmetrics.com/api/v1/records.json?page=50&per_page=100>; rel="last"
     

@@ -1,6 +1,23 @@
 # Service Times
 
-Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum.
+Service Times are the way you tell ChurchMetrics the times you'd like to work with when entering your weekly information.
+
+They are broken down into two groups: Regular service times and Event service times. Event service times are tied to the Events that you have added into your account.
+
+## Service Times for Events
+
+When creating service times for Events, the service time must have:
+
+1. `event_id`
+2. `start_date`
+3. `end_date`
+
+For instance, if you need to setup services for Easter, you would first create the Event to obtain its `event_id`. Then you would create 
+
+If you would like records for this service time to be included in regular reports, the `replaces` field must be `true`. This feature allows you to designate primary service times and secondary times. For instance, your Easter service times would probably be included in regular reports since they would overlap with regular weekend service times. A Saturday morning prayer breakfast time may not be included in regular reports since it would be an event that does not replace a regular weekend service time.
+
+If a service time is associated with an Event, the API will return that Event data.
+
 
 # Available API's
 

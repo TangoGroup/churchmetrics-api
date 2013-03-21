@@ -1,6 +1,8 @@
 # Categories
 
-Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum.
+Categories are used to group the important data your church is tracking.
+
+All accounts have Categories that we include by default. In addition to these default Categories you may add as many as you like.
 
 # Available API's
 
