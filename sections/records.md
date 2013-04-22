@@ -9,7 +9,7 @@ Records are where your data is stored. One record is stored per category, per ca
 * `GET /records.json` will return a list of all records
 * This call is paginated
 * Data includes related campus, category, and event (if applicable)
-* Optional paramaters: start_time, end_time, category_id, event_id, campus_id, week_reference
+* Optional paramaters: ```start_time```, ```end_time```, ```category_id```, ```event_id```, ```campus_id```, ```week_reference```
 
 ```
 [{
@@ -32,17 +32,6 @@ Records are where your data is stored. One record is stored per category, per ca
     "id": 4,
     "slug": "INT",
     "description": "Internet",
-    "street1": "4600 E. 2nd St",
-    "street2": "",
-    "street3": "",
-    "city": "Edmond",
-    "state": "OK",
-    "postal_code": "73034",
-    "country": "US",
-    "phone": "(405) 680-5433",
-    "color": "ff9900",
-    "lat": 35.6533,
-    "lng": -97.4216,
     "region_id": null,
     "timezone": "Central Time (US & Canada)",
     "active": true,
@@ -69,18 +58,6 @@ Records are where your data is stored. One record is stored per category, per ca
     "id": 4,
     "slug": "INT",
     "description": "Internet",
-    "street1": "4600 E. 2nd St",
-    "street2": "",
-    "street3": "",
-    "city": "Edmond",
-    "state": "OK",
-    "postal_code": "73034",
-    "country": "US",
-    "phone": "(405) 680-5433",
-    "color": "ff9900",
-    "lat": 35.6533,
-    "lng": -97.4216,
-    "region_id": null,
     "timezone": "Central Time (US & Canada)",
     "active": true,
     "created_at": "2012-01-25T00:14:02Z",
@@ -115,17 +92,6 @@ Records are where your data is stored. One record is stored per category, per ca
     "id": 2,
     "slug": "ALB",
     "description": "Albany",
-    "street1": "560 Sand Creek Roads",
-    "street2": "",
-    "street3": "",
-    "city": "Albany",
-    "state": "NY",
-    "postal_code": "12205",
-    "country": "US",
-    "phone": "(518) 456-0969",
-    "color": "E7772D",
-    "lat": 42.7244,
-    "lng": -73.8223,
     "region_id": 2,
     "timezone": "Eastern Time (US & Canada)",
     "active": true,
