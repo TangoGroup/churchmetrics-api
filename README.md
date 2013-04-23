@@ -1,4 +1,4 @@
-# ChurchMetrics API
+# Church Metrics API
 
 This is a REST-style API that uses JSON for serialization.
 
