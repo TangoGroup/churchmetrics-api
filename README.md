@@ -26,9 +26,10 @@ That's all!
 
 ## Authentication
 
-All requests are made by passing two header values: `X-Auth-User` and `X-Auth-Key`. The first is your email address, and the second is your personal API key. This key can be found on your personal profile page.
+All requests are made by passing two header values: `X-Auth-User` and `X-Auth-Key`. The first is your email address, and the second is your personal API key. This key can be found on your personal profile page. This is secure since all requests use SSL.
 
-This is secure since all requests use SSL.
+**NOTE: Only "admin" accounts have API keys and can access the API.**
+
 
 ## No XML, just JSON
 
