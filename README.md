@@ -88,4 +88,4 @@ If you reach your limit, the server will return an error of ```403 Forbidden (Ra
 
 Please tell us how we can make the API better. If you have a specific feature request or if you found a bug, please use GitHub issues. Fork these docs and send a pull request with improvements.
 
-To talk with us about the API, please contact us via our [help page](https://digeratiteam.zendesk.com/anonymous_requests/new).
+To talk with us about the API, please submit an [issue](https://github.com/lifechurch/churchmetrics-api/issues/new)
