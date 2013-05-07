@@ -50,9 +50,9 @@ You must have at least one campus in your account to use ChurchMetrics.
 }
 ```
 
-## Get totals
+## Get weekly totals
 
-* `GET /campuses/1/totals.json`
+* `GET /campuses/1/weekly_totals.json`
 * Required parameters: ```category_id```
 * Optional parameters: ```week_reference``` (defaults to current week)
 
