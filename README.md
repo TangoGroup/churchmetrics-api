@@ -1,4 +1,4 @@
-# ChurchMetrics API
+# Church Metrics API
 
 This is a REST-style API that uses JSON for serialization.
 
@@ -26,9 +26,10 @@ That's all!
 
 ## Authentication
 
-All requests are made by passing two header values: `X-Auth-User` and `X-Auth-Key`. The first is your email address, and the second is your personal API key. This key can be found on your personal profile page.
+All requests are made by passing two header values: `X-Auth-User` and `X-Auth-Key`. The first is your email address, and the second is your personal API key. This key can be found on your personal profile page. This is secure since all requests use SSL.
 
-This is secure since all requests use SSL.
+**NOTE: Only "admin" accounts have API keys and can access the API.**
+
 
 ## No XML, just JSON
 
@@ -87,4 +88,4 @@ If you reach your limit, the server will return an error of ```403 Forbidden (Ra
 
 Please tell us how we can make the API better. If you have a specific feature request or if you found a bug, please use GitHub issues. Fork these docs and send a pull request with improvements.
 
-To talk with us about the API, please contact us via our help page at [http://help.churchmetrics.com](http://help.churchmetrics.com)
+To talk with us about the API, please submit an [issue](https://github.com/lifechurch/churchmetrics-api/issues/new)

@@ -10,22 +10,11 @@ You must have at least one campus in your account to use ChurchMetrics.
 
 * `GET /campuses.json` will return a list of all campuses
 
-```
+```json
 [{
   "id": 2,
   "slug": "ALB",
   "description": "Albany",
-  "street1": "560 Sand Creek Roads",
-  "street2": "",
-  "street3": "",
-  "city": "Albany",
-  "state": "NY",
-  "postal_code": "12205",
-  "country": "US",
-  "phone": "(518) 456-0969",
-  "color": "E7772D",
-  "lat": 42.7244,
-  "lng": -73.8223,
   "region_id": 2,
   "timezone": "Eastern Time (US & Canada)",
   "active": true,
@@ -35,17 +24,6 @@ You must have at least one campus in your account to use ChurchMetrics.
   "id": 6,
   "slug": "EDM",
   "description": "Edmond",
-  "street1": "4600 E. 2nd St",
-  "street2": "",
-  "street3": "",
-  "city": "Edmond",
-  "state": "OK",
-  "postal_code": "73034",
-  "country": "US",
-  "phone": "(405) 680-5433",
-  "color": "00cc00",
-  "lat": 35.6533,
-  "lng": -97.4216,
   "region_id": 3,
   "timezone": "Central Time (US & Canada)",
   "active": true,
@@ -59,27 +37,47 @@ You must have at least one campus in your account to use ChurchMetrics.
 
 * `GET /campuses/1.json` will return the specified campus
 
-```
+```json
 {
   "id": 2,
   "slug": "ALB",
   "description": "Albany",
-  "street1": "560 Sand Creek Roads",
-  "street2": "",
-  "street3": "",
-  "city": "Albany",
-  "state": "NY",
-  "postal_code": "12205",
-  "country": "US",
-  "phone": "(518) 456-0969",
-  "color": "E7772D",
-  "lat": 42.7244,
-  "lng": -73.8223,
   "region_id": 2,
   "timezone": "Eastern Time (US & Canada)",
   "active": true,
   "created_at": "2012-01-25T00:14:02Z",
   "updated_at": "2013-03-04T22:09:56Z"
+}
+```
+
+## Get weekly totals
+
+* `GET /campuses/1/weekly_totals.json`
+* Required parameters: ```category_id```
+* Optional parameters: ```week_reference``` (defaults to current week)
+
+```json
+{
+  "campus": {
+    "id": 1,
+    "slug": "OKC",
+    "description": "Oklahoma City",
+    "region_id": 1,
+    "timezone": "Central Time (US & Canada)",
+    "active": true,
+    "created_at": "2012-01-25T00:14:02Z",
+    "updated_at": "2013-05-06T00:14:48Z"
+  },
+  "category": {
+    "id": 1,
+    "name": "Attendance",
+    "format": "number",
+    "created_at": "2012-01-25T00:48:01Z",
+    "updated_at": "2012-01-25T00:48:01Z"
+  },
+  "services_reporting": "7/7",
+  "total": "1.7K",
+  "percent_change": "2%"
 }
 ```
 
