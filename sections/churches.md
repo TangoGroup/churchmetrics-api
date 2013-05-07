@@ -5,31 +5,23 @@ Basic information about your church
 # Available API's
 
 
-## Get campus
+## Get church
 
-* `GET /campuses/me.json` will return your church
+* `GET /churches/me.json` will return your church
 
 ```json
 {
-  "id": 2,
-  "slug": "ALB",
-  "description": "Albany",
-  "street1": "560 Sand Creek Roads",
-  "street2": "",
-  "street3": "",
-  "city": "Albany",
-  "state": "NY",
-  "postal_code": "12205",
-  "country": "US",
-  "phone": "(518) 456-0969",
-  "color": "E7772D",
-  "lat": 42.7244,
-  "lng": -73.8223,
-  "region_id": 2,
-  "timezone": "Eastern Time (US & Canada)",
-  "active": true,
-  "created_at": "2012-01-25T00:14:02Z",
-  "updated_at": "2013-03-04T22:09:56Z"
+  "id": 1,
+  "name": "Your Church",
+  "currency": "usd",
+  "street": "4600 E. 2nd Street",
+  "city": "Edmond",
+  "state": "OK",
+  "postal_code": "73034",
+  "country": "USA",
+  "phone": "406-680-5433",
+  "created_at": "2012-01-25T00:13:47Z",
+  "updated_at": "2013-05-06T03:24:05Z"
 }
 ```
 
