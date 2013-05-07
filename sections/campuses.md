@@ -10,7 +10,7 @@ You must have at least one campus in your account to use ChurchMetrics.
 
 * `GET /campuses.json` will return a list of all campuses
 
-```
+```json
 [{
   "id": 2,
   "slug": "ALB",
@@ -37,7 +37,7 @@ You must have at least one campus in your account to use ChurchMetrics.
 
 * `GET /campuses/1.json` will return the specified campus
 
-```
+```json
 {
   "id": 2,
   "slug": "ALB",
@@ -47,6 +47,37 @@ You must have at least one campus in your account to use ChurchMetrics.
   "active": true,
   "created_at": "2012-01-25T00:14:02Z",
   "updated_at": "2013-03-04T22:09:56Z"
+}
+```
+
+## Get totals
+
+* `GET /campuses/1/totals.json`
+* Required parameters: ```category_id```
+* Optional parameters: ```week_reference``` (defaults to current week)
+
+```json
+{
+  "campus": {
+    "id": 1,
+    "slug": "OKC",
+    "description": "Oklahoma City",
+    "region_id": 1,
+    "timezone": "Central Time (US & Canada)",
+    "active": true,
+    "created_at": "2012-01-25T00:14:02Z",
+    "updated_at": "2013-05-06T00:14:48Z"
+  },
+  "category": {
+    "id": 1,
+    "name": "Attendance",
+    "format": "number",
+    "created_at": "2012-01-25T00:48:01Z",
+    "updated_at": "2012-01-25T00:48:01Z"
+  },
+  "services_reporting": "7/7",
+  "total": "1.7K",
+  "percent_change": "2%"
 }
 ```
 
