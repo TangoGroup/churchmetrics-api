@@ -9,7 +9,7 @@ Records are where your data is stored. One record is stored per category, per ca
 * `GET /records.json` will return a list of all records
 * This call is paginated
 * Data includes related campus, category, and event (if applicable)
-* Optional paramaters: ```start_time```, ```end_time```, ```category_id```, ```event_id```, ```campus_id```, ```week_reference```
+* Optional paramaters: ```start_time```, ```end_time```, ```start_week```, ```end_week```, ```category_id```, ```event_id```, ```campus_id```, ```week_reference```
 
 ```
 [{
