@@ -28,7 +28,7 @@ If a service time is associated with an Event, the API will return that Event da
 * This call is paginated
 * Optional paramters: event_id
 
-```
+```json
 [{
   "id": 43475,
   "day_of_week": 0,
@@ -117,16 +117,40 @@ If a service time is associated with an Event, the API will return that Event da
 }
 ```
 
-# API's under development
-
 ## Create service time
 
-* `POST /service_times.json` will create a new service time
+* `POST /service_times.json` will create a new record
+
+```json
+{
+  "campus_id": 1,
+  "day_of_week": 0,
+  "time_of_day": "2000-01-01T16:00:00Z",
+  "timezone": "Central Time (US & Canada)",
+  "relation_to_sunday": "Current",
+  "date_start": "2012-10-14",
+  "date_end": "2012-10-15",
+  "replaces": false,
+  "event_id": 1
+}
+```
+
+This will return ```201 Created``` along with the current JSON representation of the service time if the creation was a success.
 
 ## Edit service time
 
 * `PUT /service_times/1.json` will update the specified service time
 
-## Delete service time
+```json
+{
+  "date_end": "2014-10-15",
+  "replaces": true,
+}
+```
 
-* `DELETE /service_times/1.json` will delete the specified service_time
+This will return ```200 OK``` if the update was a success, along with the current JSON representation of the service time in the response body.
+
+## Delete service_time
+
+* `DELETE /service_times/1.json` will delete the specified service time and return ```204 No Content``` if that was successful. 
+* Removing a service_time does not remove related records because all service time information is stored with the record.
