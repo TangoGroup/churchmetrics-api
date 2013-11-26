@@ -10,7 +10,7 @@ Once you're finished adding your event, you can then create service times for th
 
 * `GET /events.json` will return a list of all events
 
-```
+```json
 [{
   "id": 3834,
   "name": "Easter",
@@ -29,7 +29,7 @@ Once you're finished adding your event, you can then create service times for th
 
 * `GET /events/1.json` will return the specified event
 
-```
+```json
 {
   "id": 3834,
   "name": "Easter",
@@ -38,16 +38,28 @@ Once you're finished adding your event, you can then create service times for th
 }
 ```
 
-# API's under development
-
 ## Create event
 
 * `POST /events.json` will create a new event
+
+```json
+{
+  "name": "Easter"
+}
+```
 
 ## Edit event
 
 * `PUT /events/1.json` will update the specified event
 
+```json
+{
+  "name": "Men's Breakfast"
+}
+```
+
+This will return ```200 OK``` if the update was a success, along with the current JSON representation of the event in the response body.
+
 ## Delete event
 
-* `DELETE /events/1.json` will delete the specified event
+* `DELETE /events/1.json` will delete the specified event and return ```204 No Content``` if successful.
