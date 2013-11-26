@@ -87,13 +87,11 @@ You must have at least one campus in your account to use ChurchMetrics.
 
 ```json
 { 
-  "campus": {
-    "slug": "OKC",
-    "description": "Oklahoma City",
-    "timezone": "Central Time (US & Canada)",
-    "active": true,
-    "region_id": 1
-  }
+  "slug": "OKC",
+  "description": "Oklahoma City",
+  "timezone": "Central Time (US & Canada)",
+  "active": true,
+  "region_id": 1
 }
 ```
 
@@ -103,10 +101,8 @@ You must have at least one campus in your account to use ChurchMetrics.
 
 ```json 
 {
-  "campus": {
-    "slug": "OKC",
-    "description": "Oklahoma City"
-  }
+  "slug": "OKC",
+  "description": "Oklahoma City"
 }
 ```
 
