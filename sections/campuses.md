@@ -81,16 +81,37 @@ You must have at least one campus in your account to use ChurchMetrics.
 }
 ```
 
-# API's under development
-
 ## Create campus
 
 * `POST /campuses.json` will create a new campus
+
+```json
+{ 
+  "campus": {
+    "slug": "OKC",
+    "description": "Oklahoma City",
+    "timezone": "Central Time (US & Canada)",
+    "active": true,
+    "region_id": 1
+  }
+}
+```
 
 ## Edit campus
 
 * `PUT /campuses/1.json` will update the specified campus
 
+```json 
+{
+  "campus": {
+    "slug": "OKC",
+    "description": "Oklahoma City"
+  }
+}
+```
+
+This will return 200 OK if the update was a success, along with the current JSON representation of the campus.
+
 ## Delete campus
 
-* `DELETE /campuses/1.json` will delete the specified campus
+* `DELETE /campuses/1.json` will delete the specified campus and return ```204 No Content``` if successful.
