@@ -95,6 +95,8 @@ You must have at least one campus in your account to use ChurchMetrics.
 }
 ```
 
+This will return ```201 Created``` along with the current JSON representation of the campus if the creation was a success.
+
 ## Edit campus
 
 * `PUT /campuses/1.json` will update the specified campus
