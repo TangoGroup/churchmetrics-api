@@ -78,3 +78,4 @@ This will return ```200 OK``` if the update was a success, along with the curren
 ## Delete category
 
 * `DELETE /categories/1.json` will delete the specified category and return ```204 No Content``` if successful.
+* _WARNING_: Deleting categories will remove all related Records.
