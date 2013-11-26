@@ -115,7 +115,6 @@ Records are where your data is stored. One record is stored per category, per ca
 {
   "category_id": 1,
   "campus_id": 1,
-  "week_reference": 2203,
   "service_time_id": 1,
   "service_date_time": "2012-03-27T17:00:00Z",
   "service_timezone": "Central Time (US & Canada)",
@@ -125,7 +124,8 @@ Records are where your data is stored. One record is stored per category, per ca
 }
 ```
 
-This will return ```201 Created``` along with the current JSON representation of the record if the creation was a success.
+* This will return ```201 Created``` along with the current JSON representation of the record if the creation was a success.
+* ```week_reference``` will be determined based on the ```service_time_id``` and ```service_date_time```
 
 ## Edit record
 
