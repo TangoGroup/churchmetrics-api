@@ -24,7 +24,7 @@ Volunteers are assigned to a particular campus. They can only input data for a s
 * `GET /users.json` will return a list of all users
 * Data includes related campus (unless they are an admin)
 
-```
+```json
 [{
   "id": 16763,
   "email": "test.user@lifechurch.tv",
@@ -60,7 +60,7 @@ Volunteers are assigned to a particular campus. They can only input data for a s
 * `GET /users/1.json` will return the specified user
 * Data includes related campus (unless they are an admin)
 
-```
+```json
 {
   "id": 25693,
   "email": "test@user.com",
@@ -82,16 +82,39 @@ Volunteers are assigned to a particular campus. They can only input data for a s
 }
 ```
 
-# API's under development
-
 ## Create user
 
 * `POST /users.json` will create a new user
+
+```json
+{
+  "email": "joe@schmoe.com",
+  "locale": "en",
+  "role": {
+    "volunteer"
+  },
+  "campus": {
+    "id": 1
+  }
+}
+```
+
+This will return ```201 Created``` along with the current JSON representation of the user if the creation was a success.
 
 ## Edit user
 
 * `PUT /users/1.json` will update the specified user
 
+```json
+{
+  "campus": {
+    "id": 2
+  }
+}
+```
+
+This will return ```200 OK``` if the update was a success, along with the current JSON representation of the user in the response body.
+
 ## Delete user
 
-* `DELETE /users/1.json` will delete the specified user
+* `DELETE /users/1.json` will remove the specified user from your church and return ```204 No Content``` if that was successful. 
