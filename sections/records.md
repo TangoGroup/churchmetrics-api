@@ -11,7 +11,7 @@ Records are where your data is stored. One record is stored per category, per ca
 * Data includes related campus, category, and event (if applicable)
 * Optional paramaters: ```start_time```, ```end_time```, ```start_week```, ```end_week```, ```category_id```, ```event_id```, ```campus_id```, ```week_reference```
 
-```
+```json
 [{
   "id": 1146320,
   "created_at": "2012-03-28T16:30:01Z",
@@ -71,7 +71,7 @@ Records are where your data is stored. One record is stored per category, per ca
 * `GET /records/1.json` will return the specified record
 * Data includes related campus, category, and event (if applicable)
 
-```
+```json
 {
   "id": 1146564,
   "created_at": "2012-03-28T17:54:06Z",
@@ -107,16 +107,39 @@ Records are where your data is stored. One record is stored per category, per ca
 }
 ```
 
-# API's under development
-
 ## Create record
 
 * `POST /records.json` will create a new record
+
+```json
+{
+  "category_id": 1,
+  "campus_id": 1,
+  "week_reference": 2203,
+  "service_time_id": 1,
+  "service_date_time": "2012-03-27T17:00:00Z",
+  "service_timezone": "Central Time (US & Canada)",
+  "value": 20,
+  "replaces": true,
+  "event_id": 1  
+}
+```
+
+This will return ```201 Created``` along with the current JSON representation of the record if the creation was a success.
 
 ## Edit record
 
 * `PUT /records/1.json` will update the specified record
 
+```json
+{
+  "campus_id": 2,
+  "value": 20,
+}
+```
+
+This will return ```200 OK``` if the update was a success, along with the current JSON representation of the record in the response body.
+
 ## Delete record
 
-* `DELETE /records/1.json` will delete the specified record
+* `DELETE /records/1.json` will delete the specified record and return ```204 No Content``` if that was successful. 
