@@ -9,7 +9,7 @@ Regions are an optional feature.
 ## Get regions
 
 * `GET /regions.json` will return a list of all regions
-* Data includes list of all campuses within each region
+* Data includes list of all campus ids within each region
 
 ```
 [{
@@ -17,33 +17,13 @@ Regions are an optional feature.
   "name": "Region 1",
   "created_at": "2012-01-25T00:13:54Z",
   "updated_at": "2012-01-25T00:13:54Z",
-  "campuses": [{
-    "id": 15,
-    "slug": "STO",
-    "description": "South Tulsa",
-    "region_id": 2,
-    "timezone": "Central Time (US & Canada)",
-    "active": true,
-    "created_at": "2012-01-25T00:14:02Z",
-    "updated_at": "2013-03-04T02:38:00Z"
-   }
-   …
+  "campus_ids": [5, 2, 13, 15, 22350, 75, 14, 8, 26113, 10753, 10]
   }, {
   "id": 3,
   "name": "Region 2",
   "created_at": "2012-01-25T00:13:54Z",
   "updated_at": "2012-01-25T00:13:54Z",
-  "campuses": [{
-    "id": 6,
-    "slug": "CEN",
-    "description": "Central",
-    "region_id": 3,
-    "timezone": "Central Time (US & Canada)",
-    "active": true,
-    "created_at": "2012-01-25T00:14:02Z",
-    "updated_at": "2012-01-25T00:14:02Z"
-  }
-  … 
+  "campus_ids": [5, 2, 13, 15, 22350, 75, 14, 8, 26113, 10753, 10]
 }]
 ```
 
@@ -59,17 +39,7 @@ Regions are an optional feature.
   "name": "Region 2",
   "created_at": "2012-01-25T00:13:54Z",
   "updated_at": "2012-01-25T00:13:54Z",
-  "campuses": [{
-    "id": 6,
-    "slug": "CEN",
-    "description": "Central",
-    "region_id": 3,
-    "timezone": "Central Time (US & Canada)",
-    "active": true,
-    "created_at": "2012-01-25T00:14:02Z",
-    "updated_at": "2012-01-25T00:14:02Z"
-  }
-  … 
+  "campus_ids": [5, 2, 13, 15, 22350, 75, 14, 8, 26113, 10753, 10]
 }
 ```
 
