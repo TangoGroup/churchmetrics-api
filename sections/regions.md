@@ -17,13 +17,13 @@ Regions are an optional feature.
   "name": "Region 1",
   "created_at": "2012-01-25T00:13:54Z",
   "updated_at": "2012-01-25T00:13:54Z",
-  "campus_ids": [5, 2, 13, 15, 22350, 75, 14, 8, 26113, 10753, 10]
+  "campus_ids": [1, 2, 3]
   }, {
   "id": 3,
   "name": "Region 2",
   "created_at": "2012-01-25T00:13:54Z",
   "updated_at": "2012-01-25T00:13:54Z",
-  "campus_ids": [5, 2, 13, 15, 22350, 75, 14, 8, 26113, 10753, 10]
+  "campus_ids": [4, 5, 6]
 }]
 ```
 
@@ -39,7 +39,7 @@ Regions are an optional feature.
   "name": "Region 2",
   "created_at": "2012-01-25T00:13:54Z",
   "updated_at": "2012-01-25T00:13:54Z",
-  "campus_ids": [5, 2, 13, 15, 22350, 75, 14, 8, 26113, 10753, 10]
+  "campus_ids": [1, 2, 3]
 }
 ```
 
