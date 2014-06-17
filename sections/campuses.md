@@ -87,6 +87,13 @@ You must have at least one campus in your account to use ChurchMetrics.
 
 * `POST /campuses.json` will create a new campus
 
+```
+{ 
+  "slug": "ABC", 
+  "description"", :timezone, :active, :region_id
+```
+
+
 ## Edit campus
 
 * `PUT /campuses/1.json` will update the specified campus
