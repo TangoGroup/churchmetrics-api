@@ -9,8 +9,8 @@ They are broken down into two groups: Regular service times and Event service ti
 When creating service times for Events, the service time must have:
 
 1. `event_id`
-2. `start_date`
-3. `end_date`
+2. `date_start`
+3. `date_end`
 
 For instance, if you need to setup services for Easter, you would first create the Event to obtain its `event_id`. Then you would create 
 
@@ -77,6 +77,7 @@ If a service time is associated with an Event, the API will return that Event da
     "created_at": "2012-01-25T00:14:02Z",
     "updated_at": "2013-03-04T02:19:53Z"
   }
+  "event": null
 }]
 ```
 

@@ -37,7 +37,8 @@ Records are where your data is stored. One record is stored per category, per ca
     "active": true,
     "created_at": "2012-01-25T00:14:02Z",
     "updated_at": "2013-03-04T03:13:22Z"
-  }
+  },
+  "event": null
 }, {
   "id": 1146321,
   "created_at": "2012-03-28T16:30:01Z",
@@ -62,6 +63,12 @@ Records are where your data is stored. One record is stored per category, per ca
     "active": true,
     "created_at": "2012-01-25T00:14:02Z",
     "updated_at": "2013-03-04T03:13:22Z"
+  },
+  "event": {
+    "id": 3834,
+    "name": "Easter",
+    "created_at": "2012-03-21T15:09:10Z",
+    "updated_at": "2012-03-21T15:09:10Z"
   }
 }]
 ```
