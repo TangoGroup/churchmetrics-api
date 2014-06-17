@@ -69,9 +69,21 @@ Basic information about your church
 }
 ```
 
-# API's under development
-
-
 ## Edit church
 
 * `PUT /churches/me.json` will update your church
+
+```json
+{
+  "name": "Your Church",
+  "currency": "usd",
+  "street": "4600 E. 2nd Street",
+  "city": "Edmond",
+  "state": "OK",
+  "postal_code": "73034",
+  "country": "USA",
+  "phone": "406-680-5433",
+}
+```
+
+This will return ```200 OK``` if the update was a success, along with the current JSON representation of the church in the response body.
