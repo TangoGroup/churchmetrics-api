@@ -33,16 +33,7 @@ Volunteers are assigned to a particular campus. They can only input data for a s
   "name": "test.user",
   "timezone": "Central Time (US & Canada)",
   "role": "staff",
-  "campus": {
-    "id": 6,
-    "slug": "EDM",
-    "description": "Central",
-    "region_id": 3,
-    "timezone": "Central Time (US & Canada)",
-    "active": true,
-    "created_at": "2012-01-25T00:14:02Z",
-    "updated_at": "2012-01-25T00:14:02Z"
-  }
+  "campus_id": 6
 }, {
   "id": 18342,
   "email": "test.user2@lifechurch.tv",
@@ -69,16 +60,7 @@ Volunteers are assigned to a particular campus. They can only input data for a s
   "name": "test.volunteer",
   "timezone": "Central Time (US & Canada)",
   "role": "volunteer",
-  "campus": {
-    "id": 2,
-    "slug": "ALB",
-    "description": "Albany",
-    "region_id": 2,
-    "timezone": "Eastern Time (US & Canada)",
-    "active": true,
-    "created_at": "2012-01-25T00:14:02Z",
-    "updated_at": "2013-03-04T22:09:56Z"
-  }
+  "campus_id": 2
 }
 ```
 

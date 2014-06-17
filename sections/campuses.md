@@ -86,7 +86,7 @@ You must have at least one campus in your account to use ChurchMetrics.
 * `POST /campuses.json` will create a new campus
 
 ```json
-{ 
+{
   "slug": "OKC",
   "description": "Oklahoma City",
   "timezone": "Central Time (US & Canada)",
@@ -101,7 +101,7 @@ This will return ```201 Created``` along with the current JSON representation of
 
 * `PUT /campuses/1.json` will update the specified campus
 
-```json 
+```json
 {
   "slug": "OKC",
   "description": "Oklahoma City"
