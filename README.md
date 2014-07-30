@@ -49,6 +49,21 @@ Many API methods take optional parameters. For GET requests, any parameters not 
     
 For POST requests, parameters not included in the URL should be encoded as JSON with a Content-Type of ‘application/json’.
 
+## Time Formats
+
+Where applicable, any date or time parameters will follow the ISO8601 formats. 
+
+Example date:
+    
+    start_date=2014-01-01
+    
+Example time:
+
+    start_time=2013-12-31T23:59:59Z
+
+If you find these filters are not working for you, double-check the documentation and make sure you're using the proper parameter. If the docs call for ```start_time```, passing ```start_date``` will not work.
+
+
 ## Pagination
 
 Requests that return multiple items will be paginated to 30 items by default. You can specify further pages with the `?page` parameter. For some resources, you can also set a custom page size up to 100 with the `?per_page` parameter. 
