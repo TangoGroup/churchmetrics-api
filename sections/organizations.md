@@ -1,15 +1,13 @@
-# THIS API IS DEPRECATED. PLEASE USE 'Organizations' INSTEAD.
+# Organizations
 
-## Churches
+Basic information about your organization
 
-Basic information about your church
-
-## Available API's
+# Available API's
 
 
-## Get church
+## Get organization
 
-* `GET /churches/me.json` will return your church
+* `GET /organizations/me.json` will return your organization
 
 ```json
 {
@@ -29,7 +27,7 @@ Basic information about your church
 
 ## Get weekly_totals
 
-* `GET /churches/weekly_totals.json`
+* `GET /organizations/weekly_totals.json`
 * Required parameters: ```category_id```
 * Optional parameters: ```week_reference``` (defaults to current week)
 
@@ -73,7 +71,7 @@ Basic information about your church
 
 ## Edit church
 
-* `PUT /churches/me.json` will update your church
+* `PUT /organizations/me.json` will update your organization
 
 ```json
 {
@@ -88,4 +86,4 @@ Basic information about your church
 }
 ```
 
-This will return ```200 OK``` if the update was a success, along with the current JSON representation of the church in the response body.
+This will return ```200 OK``` if the update was a success, along with the current JSON representation of the organization in the response body.
