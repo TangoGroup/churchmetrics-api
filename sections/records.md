@@ -4,6 +4,12 @@ Records are where your data is stored. One record is stored per category, per ca
 
 # Available API's
 
+- [Get records](#get-records)
+- [Get record](#get-record)
+- [Create record](#create-record)
+- [Edit record](#edit-record)
+- [Delete record](#delete-record)
+
 ## Get records
 
 * `GET /records.json` returns a list of all records
