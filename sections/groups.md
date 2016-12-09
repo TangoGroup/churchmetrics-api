@@ -95,3 +95,23 @@ Groups are organizations in Church Metrics that can manage and report against ot
   }
 ]
 ```
+
+## Create an Invite
+
+* `POST /groups/invite.json` will create and return an invite with the email address you provide
+* If an invite already exists, it will return the existing one
+* Possible statuses: `[pending, approved, declined]`
+* Required parameters: ```email```
+
+```json
+{
+  "id":11,
+  "church_id":9,
+  "group_id":1,
+  "invitee_email":"invitee_again@example.org",
+  "invitee_id":null,
+  "status":"pending",
+  "joined_at":null,
+  "uuid":"1fe2846a-0c73-47ac-891d-3e9480e62a88"
+}
+ ```
