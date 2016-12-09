@@ -4,13 +4,19 @@ Records are where your data is stored. One record is stored per category, per ca
 
 # Available API's
 
+- [Get records](#get-records)
+- [Get record](#get-record)
+- [Create record](#create-record)
+- [Edit record](#edit-record)
+- [Delete record](#delete-record)
+
 ## Get records
 
-* `GET /records.json` will return a list of all records
-* This call is paginated
+* `GET /records.json` returns a list of all records
+* This call is [paginated](../README.md#pagination)
 * Data includes related campus, category, and event (if applicable)
-* Optional paramaters: ```start_time```, ```end_time```, ```start_week```, ```end_week```, ```category_id```, ```event_id```, ```campus_id```, ```week_reference```
-
+* Optional query parameters: `start_time`, `end_time`, `start_week`, `end_week`, `category_id`, `event_id`, `campus_id`, `week_reference`
+* Example response:
 ```json
 [{
   "id": 1146320,
@@ -75,9 +81,9 @@ Records are where your data is stored. One record is stored per category, per ca
 
 ## Get record
 
-* `GET /records/1.json` will return the specified record
+* `GET /records/1.json` returns the specified record
 * Data includes related campus, category, and event (if applicable)
-
+* Example response:
 ```json
 {
   "id": 1146564,
@@ -116,8 +122,9 @@ Records are where your data is stored. One record is stored per category, per ca
 
 ## Create record
 
-* `POST /records.json` will create a new record
-
+* `POST /records.json` creates a new record
+* See the permitted fields for record payload in the [Editable fields](#editable-fields) section
+* Example payload:
 ```json
 {
   "category_id": 1,
@@ -130,23 +137,42 @@ Records are where your data is stored. One record is stored per category, per ca
   "event_id": 1  
 }
 ```
-
-* This will return ```201 Created``` along with the current JSON representation of the record if the creation was a success.
-* ```week_reference``` will be determined based on the ```service_time_id``` and ```service_date_time```
+* This returns `201 Created` along with the current JSON representation of the record if creation succeeded
+* `week_reference` is determined using the submitted `service_time_id` and `service_date_time`
 
 ## Edit record
 
-* `PUT /records/1.json` will update the specified record
-
+* `PUT /records/1.json` updates the specified record
+* See the permitted fields for record payload in the [Editable fields](#editable-fields) section
+* Example payload:
 ```json
 {
   "campus_id": 2,
   "value": 20,
 }
 ```
-
-This will return ```200 OK``` if the update was a success, along with the current JSON representation of the record in the response body.
+* This returns `200 OK` if the update succeeded, along with the current JSON representation of the record in the response body
 
 ## Delete record
 
-* `DELETE /records/1.json` will delete the specified record and return ```204 No Content``` if that was successful. 
+* `DELETE /records/1.json` deletes the specified record and returns `204 No Content` if deletion succeeded
+
+## Editable fields
+
+The editable fields are:
+- `campus_id`
+- `category_id`
+- `end_time`
+- `end_week`
+- `event_id`
+- `replaces`
+- `service_date_time`
+- `service_time_id`
+- `service_timezone`
+- `start_time`
+- `start_week`
+- `value`
+- `week_reference`
+
+These can be set in `POST` and `PUT` requests
+- Any other fields are managed by ChurchMetrics, and are ignored even if included in request payload
