@@ -151,7 +151,7 @@ Records are where your data is stored. One record is stored per category, per ca
   "value": 20,
 }
 ```
-* This returns `204 OK` if the update succeeded.
+* This returns `204 No Content` if the update succeeded.
 
 ## Delete record
 
