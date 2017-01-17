@@ -151,7 +151,7 @@ Records are where your data is stored. One record is stored per category, per ca
   "value": 20,
 }
 ```
-* This returns `200 OK` if the update succeeded, along with the current JSON representation of the record in the response body
+* This returns `204 OK` if the update succeeded.
 
 ## Delete record
 
