@@ -168,7 +168,6 @@ The editable fields are:
 - `replaces`
 - `service_date_time`
 - `service_time_id`
-- `service_timezone`
 - `start_time`
 - `start_week`
 - `value`
