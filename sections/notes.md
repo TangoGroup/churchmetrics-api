@@ -16,8 +16,8 @@ just one note. No individual notes per category.
 
 * `GET /notes.json` returns a list of all notes
 * This call is [paginated](../README.md#pagination)
-* Data includes related campus, and event (if applicable) TODO this is pending for fix to https://github.com/lifechurch/churchmetrics/issues/845
-* Optional query parameters: `start_time`, `end_time`, `start_week`, `end_week`, `event_id` (TODO issue #845), `campus_id`, `week_reference`
+* Data includes related campus, and event (if applicable)
+* Optional query parameters: `start_time`, `end_time`, `start_week`, `end_week`, `event_id`, `campus_id`, `week_reference`
 * Example response:
 ```json
 [{
