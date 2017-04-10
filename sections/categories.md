@@ -19,14 +19,16 @@ Categories are used to group the important data your church is tracking.
   "format": "number",
   "kind": "Attendance",
   "created_at": "2012-01-25T00:48:01Z",
-  "updated_at": "2012-01-25T00:48:01Z"
+  "updated_at": "2012-01-25T00:48:01Z",
+  "parent_id": null
 }, {
   "id": 9,
   "name": "Contributions",
   "format": "currency",
-  "kind": "Attendance",
+  "kind": "Contributions",
   "created_at": "2012-01-25T00:48:03Z",
-  "updated_at": "2012-01-25T00:48:03Z"
+  "updated_at": "2012-01-25T00:48:03Z",
+  "parent_id": 5
 }]
 ```
 
@@ -42,7 +44,8 @@ Categories are used to group the important data your church is tracking.
   "format": "number",
   "kind": "Attendance",
   "created_at": "2012-01-25T00:48:01Z",
-  "updated_at": "2012-01-25T00:48:01Z"
+  "updated_at": "2012-01-25T00:48:01Z",
+  "parent_id": null
 }
 ```
 
