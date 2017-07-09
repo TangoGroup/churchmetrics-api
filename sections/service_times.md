@@ -76,7 +76,7 @@ If a service time is associated with an Event, the API will return that Event da
     "active": true,
     "created_at": "2012-01-25T00:14:02Z",
     "updated_at": "2013-03-04T02:19:53Z"
-  }
+  },
   "event": null
 }]
 ```
