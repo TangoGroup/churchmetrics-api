@@ -14,8 +14,9 @@ Records are where your data is stored. One record is stored per category, per ca
 
 * `GET /records.json` returns a list of all records
 * This call is [paginated](../README.md#pagination)
-* Data includes related campus, category, and event (if applicable)
-* Optional query parameters: `start_time`, `end_time`, `start_week`, `end_week`, `category_id`, `event_id`, `campus_id`, `week_reference`
+* Data includes related campus_id, category_id, and event_id (if applicable)
+* Optional query parameters: `start_time`- String, `end_time`- String, `start_week`- Number, `end_week`- Number, `category_id`- Number, `event_id`- Number, `campus_id`- Number, `week_reference`- Number, `page`- Number, `per_page`- Number (`start_week`, `end_week`, `week_reference` are each equal to the number of weeks between the selected date and January 1, 1970)
+* Example request: https://churchmetrics.com/api/v1/records.json?campus_id=43656&category_id=6&page=1&per_page=100&start_week=2498&end_week=2511
 * Example response:
 ```json
 [{
@@ -80,9 +81,8 @@ Records are where your data is stored. One record is stored per category, per ca
 ```
 
 ## Get record
-
-* `GET /records/1.json` returns the specified record
-* Data includes related campus, category, and event (if applicable)
+* `GET /records.json?campus_id=43656&category_id=6&event_id=13` returns the specified record with the query parameters campus_id, category_id, and event_id
+* Data includes related campus_id, category_id, event_id, start_time, start_week, end_week (if applicable)
 * Example response:
 ```json
 {
